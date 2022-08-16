@@ -16,7 +16,7 @@ const quiz = ({ questions }) => {
                     <Box>
                         {
                             (questions || []).map(question =>
-                                <Box p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                                <Box key={question.id} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
                                     <Text pb={3} fontWeight="bold">Question: {question.question}</Text>
                                     <Text pb={5}>Answer:  {question.answer}</Text>
                                 </Box>
