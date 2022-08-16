@@ -62,7 +62,7 @@ const news = ({ results }) => {
 }
 
 export async function getServerSideProps () {
-    const res = await fetch("https://newsdata.io/api/1/news?apikey=pub_100593ce8fd2dcd7978c6f3a7ca41b79576ac&q=neuroscience");
+    const res = await fetch(`https://newsdata.io/api/1/news?apikey=${process.env.NEXT_PUBLIC_NEWS_KEY}&q=neuroscience`);
     const data = await res.json();
 
 
