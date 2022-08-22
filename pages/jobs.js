@@ -24,7 +24,7 @@ const jobs = ({ job }) => {
 }
 
 export async function getServerSideProps () {
-    const res = await fetch("https://www.remotefrontendjobs.com/_next/data/X1BEbBEbrp4jiGdJgFKh7/index.json")
+    const res = await fetch("https://www.remotefrontendjobs.com/api/jobs?offset=20&limit=10&query=&onlyWithSalary=false")
     const data = await res.json();
     
     if (!data) {
