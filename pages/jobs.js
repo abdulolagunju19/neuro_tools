@@ -11,7 +11,7 @@ const jobs = ({ data, jobs }) => {
                 <div>
                     {data.map((data, index) => (
                             <Box key={index} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                                <Link href={data.url} isExternal><Text fontWeight="bold" p={3}>{data.title}</Text></Link>
+                                <Link href={`https://albertajobcentre.ca/${data.url}`} isExternal><Text fontWeight="bold" p={3}>{data.title}</Text></Link>
                                 <Text fontWeight="bold" p={3}>Company: {data.employer.name}</Text>
                                 <Image 
                                     src='/Profile-data-bro.png'
