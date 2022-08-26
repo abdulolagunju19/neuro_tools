@@ -25,7 +25,7 @@ const jobs = ({ data, jobs }) => {
                     ))}
                     {jobs.map((jobs, index) => (
                             <Box key={index} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                                <Link href={jobs.link} isExternal><Text fontWeight="bold" p={3}>{jobs.jobtitle}</Text></Link>
+                                <Text fontWeight="bold" p={3}>{jobs.jobtitle}</Text>
                                 <Text fontWeight="bold" p={3}>Company: {jobs.company}</Text>
                                 <Image 
                                     src='/Profile-data-bro.png'
