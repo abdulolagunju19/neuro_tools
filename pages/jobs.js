@@ -75,7 +75,8 @@ const Jobs = ({ albertaJobCenter, jobOffers }) => {
 
 export async function getServerSideProps () {
 
-    const [albertaJobCenterRes, jobOffersRes] = await Promise.all([
+    try{
+        const [albertaJobCenterRes, jobOffersRes] = await Promise.all([
         fetch("https://www.albertajobcentre.ca/api/v1.1/public/jobs?page=1&q=scientist"), 
         fetch("https://careers.joboffer.ca/api/search?page=0&subsystem_code=eco&city=alberta")
       ]);
@@ -83,6 +84,10 @@ export async function getServerSideProps () {
         albertaJobCenterRes.json(), 
         jobOffersRes.json()
       ]);
+    } catch (error){
+        console.error('Error fetching data:', error);
+    }
+    
 
       return { props: { albertaJobCenter, jobOffers } };
 }
