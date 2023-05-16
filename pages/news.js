@@ -20,15 +20,15 @@ const news = ({ results }) => {
                 <Heading py={5} as='h3' size='lg'>Find Neuroscience News Here!</Heading>
                 <Flex>
                     <div>
-                        {results.map((results, index) => (
+                        {results.map((result, index) => (
                                 <Box key={index} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                                    <Link href={results.link} isExternal>
-                                        <Text p={1} fontSize='lg' fontWeight='bold'>{results.title}</Text>
+                                    <Link href={result.link} isExternal>
+                                        <Text p={1} fontSize='lg' fontWeight='bold'>{result.title}</Text>
                                     </Link>
-                                    <Text p={3}>{results.description}</Text>
+                                    <Text p={3}>{result.description}</Text>
                                     <Center>
                                     <Image 
-                                        src={results.image_url}
+                                        src={result.image_url}
                                         alt='Neuroscience Image' 
                                         boxSize='300px'
                                         objectFit='cover'
@@ -46,9 +46,9 @@ const news = ({ results }) => {
                                                 </AccordionButton>
                                             </h2>
                                             <AccordionPanel pb={4}>
-                                                {results.content}
+                                                {result.content}
                                                 <br/>
-                                                <Text>Published At: {results.pubDate}</Text>
+                                                <Text>Published At: {result.pubDate}</Text>
                                             </AccordionPanel>
                                         </AccordionItem>
                                     </Accordion>
@@ -62,7 +62,7 @@ const news = ({ results }) => {
 }
 
 export async function getServerSideProps () {
-    const res = await fetch(`https://newsdata.io/api/1/news?apikey=${process.env.NEXT_PUBLIC_NEWS_KEY}&q=neuroscience`);
+    const res = await fetch(`https://newsdata.io/api/1/news?apikey=${process.env.NEXT_PUBLIC_NEWS_KEY}&q=neuroscience&language=en`);
     const data = await res.json();
 
 

@@ -16,9 +16,13 @@ const Container = ({ children }) => {
             <Box>
                 <Flex justifyContent="center" m={5}>
                     <HStack spacing={20}>
-                        <Heading as='h4' size='md'>
-                            Neuro*Discite
-                        </Heading>
+                        <Link href='/' style={{ textDecoration: 'none' }}>
+                            <Button variant="ghost">
+                                <Heading as='h4' size='md'>
+                                    Neuro*Discite
+                                </Heading>
+                            </Button>
+                        </Link>
                         <HStack>
                             <Link href='/' style={{ textDecoration: 'none' }}>
                                 <Button variant="ghost" size='md'>
