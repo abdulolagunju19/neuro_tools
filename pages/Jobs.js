@@ -78,7 +78,7 @@ export async function getServerSideProps () {
     try{
         const [albertaJobCenterRes, jobOffersRes] = await Promise.all([
         fetch("https://www.albertajobcentre.ca/api/v1.1/public/jobs?page=1&q=scientist"), 
-        fetch("https://careers.joboffer.ca/api/search?page=0&subsystem_code=eco&city=alberta")
+        fetch("https://careers.joboffer.ca/api/search?page=0&city=alberta")
       ]);
       const [albertaJobCenter, jobOffers] = await Promise.all([
         albertaJobCenterRes.json(), 
