@@ -8,7 +8,7 @@ import { InlineWidget } from "react-calendly";
 
 import Container from '../components/Container'
 
-const contact = () => {
+const Contact = () => {
     return (
         <Container>
             <VStack>
@@ -56,4 +56,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact

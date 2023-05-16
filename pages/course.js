@@ -13,7 +13,7 @@ import Container from '../components/Container'
 
 import { PDFObject } from 'react-pdfobject'
 
-const course = () => {
+const Course = () => {
     return (
         <Container>
             <Flex maxW={700} m={5} flexDir="column" justifyContent="center">
@@ -147,4 +147,4 @@ const course = () => {
     )
 }
 
-export default course
+export default Course

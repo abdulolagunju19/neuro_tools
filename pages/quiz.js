@@ -8,7 +8,7 @@ import { FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
 
 import { useRouter } from 'next/router'
 
-const quiz = ({ questions }) => {
+const Quiz = ({ questions }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [question, setQuestion] = useState('')
@@ -141,4 +141,4 @@ export const getServerSideProps = async (context) => {
     }
 }
 
-export default quiz
+export default Quiz

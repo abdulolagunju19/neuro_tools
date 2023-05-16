@@ -29,27 +29,27 @@ const Container = ({ children }) => {
                                     Home
                                 </Button>
                             </Link>
-                            <Link href='/course' style={{ textDecoration: 'none' }}>
+                            <Link href='/Course' style={{ textDecoration: 'none' }}>
                                 <Button variant="ghost" size='md'>
                                     Course
                                 </Button>
                             </Link> 
-                            <Link href='/quiz' style={{ textDecoration: 'none' }}>
+                            <Link href='/Quiz' style={{ textDecoration: 'none' }}>
                                 <Button variant="ghost" size='md'>
                                     Quiz
                                 </Button>
                             </Link>
-                            <Link href='/news' style={{ textDecoration: 'none' }}>
+                            <Link href='/News' style={{ textDecoration: 'none' }}>
                                 <Button variant="ghost" size='md'>
                                     News
                                 </Button>
                             </Link>
-                            <Link href='/jobs' style={{ textDecoration: 'none' }}>
+                            <Link href='/Jobs' style={{ textDecoration: 'none' }}>
                                 <Button variant="ghost" size='md'>
                                     Jobs
                                 </Button>
                             </Link>
-                            <Link href='/contact' style={{ textDecoration: 'none' }}>
+                            <Link href='/Contact' style={{ textDecoration: 'none' }}>
                                 <Button variant="ghost" size='md'>
                                     Contact
                                 </Button>
@@ -79,27 +79,27 @@ const Container = ({ children }) => {
                             Home
                         </Button>
                     </Link> 
-                    <Link href='/course' style={{ textDecoration: 'none' }}>
+                    <Link href='/Course' style={{ textDecoration: 'none' }}>
                         <Button variant="ghost" size='md'>
                             Course
                         </Button>
                     </Link>
-                    <Link href='/quiz' style={{ textDecoration: 'none' }}>
+                    <Link href='/Quiz' style={{ textDecoration: 'none' }}>
                         <Button variant="ghost" size='md'>
                             Quiz
                         </Button>
                     </Link>
-                    <Link href='/news' style={{ textDecoration: 'none' }}>
+                    <Link href='/News' style={{ textDecoration: 'none' }}>
                         <Button variant="ghost" size='md'>
                             News
                         </Button>
                     </Link>
-                    <Link href='/jobs' style={{ textDecoration: 'none' }}>
+                    <Link href='/Jobs' style={{ textDecoration: 'none' }}>
                         <Button variant="ghost" size='md'>
                             Jobs
                         </Button>
                     </Link>
-                    <Link href='/contact' style={{ textDecoration: 'none' }}>
+                    <Link href='/Contact' style={{ textDecoration: 'none' }}>
                         <Button variant="ghost" size='md'>
                             Contact
                         </Button>

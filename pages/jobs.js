@@ -11,7 +11,7 @@ import {
 
 import Container from '../components/Container'
 
-const jobs = ({ albertaJobCenter, jobOffers }) => {
+const Jobs = ({ albertaJobCenter, jobOffers }) => {
     const { data } = albertaJobCenter
     const { jobs } = jobOffers
 
@@ -87,4 +87,4 @@ export async function getServerSideProps () {
       return { props: { albertaJobCenter, jobOffers } };
 }
 
-export default jobs
+export default Jobs

@@ -12,7 +12,7 @@ import {
 
 import Container from '../components/Container'
 
-const news = ({ results }) => {
+const News = ({ results }) => {
 
     return (
         <Container>
@@ -84,4 +84,4 @@ export async function getServerSideProps () {
     }
 }
 
-export default news
+export default News
