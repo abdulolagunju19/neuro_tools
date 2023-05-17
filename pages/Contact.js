@@ -12,9 +12,8 @@ const Contact = () => {
     return (
         <Container>
             <VStack>
-                <Text p={5}>Thanks for visiting my site! Contact me at this email: olagunju(at)ualberta.ca</Text>
-                <InlineWidget styles={{height:"50em"}} url="https://calendly.com/blandsentence/phone-screen" />
-                <HStack>
+                <Text as='b' fontSize='2xl' p={5}>Thanks for visiting my site! Contact me at this email: olagunju(at)ualberta.ca</Text>
+                <HStack pb={1}>
                 <Link href="https://github.com/abdulolagunju19" isExternal>
                     <IconButton
                         variant="ghost"
@@ -51,6 +50,7 @@ const Contact = () => {
                     />
                 </Link>
                 </HStack>
+                <InlineWidget styles={{height:"50em", width: "70em"}} url="https://calendly.com/blandsentence/phone-screen" />
             </VStack>
         </Container>
     )
