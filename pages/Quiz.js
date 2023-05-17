@@ -103,7 +103,7 @@ const Quiz = ({ questions }) => {
                                         <Box p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
                                             <Text fontSize='xl' fontWeight="bold" as='ins'>Question {index+1}</Text>
                                             <Text fontSize='xl' fontWeight="bold">{question.question}</Text>
-                                            <Flex m={5} direction="column" alignItems="start">
+                                            <Flex m={5} direction="column" alignItems="start" >
                                                     <Button onClick={() => handleMultipleChoice(question.choiceA, question.id)} variant='ghost'>A: {question.choiceA}</Button>
                                                     <Button onClick={() => handleMultipleChoice(question.choiceB, question.id)} variant='ghost'>B: {question.choiceB}</Button>
                                                     <Button onClick={() => handleMultipleChoice(question.choiceC, question.id)} variant='ghost'>C: {question.choiceC}</Button>

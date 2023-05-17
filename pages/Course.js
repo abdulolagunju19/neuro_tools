@@ -17,7 +17,7 @@ const Course = () => {
     return (
         <Container>
             <Flex maxW={700} m={5} flexDir="column" justifyContent="center">
-            <VStack justifyContent="center">
+            <VStack justifyContent="center" >
                 <Heading py={5} as='h3' size='lg'>
                 Get Started
                 </Heading>
@@ -49,7 +49,7 @@ const Course = () => {
                             </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4}>
-                        <Box id="pdf2" borderWidth='5px' borderRadius={5} mt={5}>
+                        <Box id="pdf2" borderWidth='5px' borderRadius={5} mt={5} >
                             {/* <PDFObject url="/Foundations-of-Neuroscience-97-176.pdf" width={'700px'} height={'800px'} /> */}
                             <embed src="/Foundations-of-Neuroscience-97-176.pdf" width="700" height="800"></embed>
                         </Box>
