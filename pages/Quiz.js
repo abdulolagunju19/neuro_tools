@@ -25,11 +25,16 @@ import { CloseIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router'
 
 const Quiz = ({ questions }) => {
-    const [name, setName] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [question, setQuestion] = useState('')
-    const [answer, setAnswer] = useState('')
-    const [id, setID] = useState('')
+    const [correctAnswer, setCorrectAnswer] = useState('')
+    const [choiceA, setChoiceA] = useState('')
+    const [choiceB, setChoiceB] = useState('')
+    const [choiceC, setChoiceC] = useState('')
+    const [choiceD, setChoiceD] = useState('')
+
 
     const router = useRouter();
     const toast = useToast();
@@ -37,7 +42,17 @@ const Quiz = ({ questions }) => {
     const handleSubmit = async (e) => {
         const { data, error } = await supabase
             .from('questions')
-            .upsert([{ question: question, answer: answer, name: name, email: email }])
+            .upsert({ 
+                first_name: firstName, 
+                last_name: lastName, 
+                question: question, 
+                correct_answer: correctAnswer, 
+                email: email, 
+                choiceA: choiceA, 
+                choiceB: choiceB, 
+                choiceC: choiceC, 
+                choiceD: choiceD 
+            })
         
         error ? console.log(error) : console.log(data)
         router.reload()
@@ -82,11 +97,11 @@ const Quiz = ({ questions }) => {
                 <Heading>Multiple Choice Test</Heading>             
                     <Box>
                         {
-                            (questions).map((question) =>
+                            (questions).map((question, index) =>
                                 <>
                                     <Center key={question.id}>
                                         <Box p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
-                                            <Text fontSize='xl' fontWeight="bold" as='ins'>Question {question.id}</Text>
+                                            <Text fontSize='xl' fontWeight="bold" as='ins'>Question {index+1}</Text>
                                             <Text fontSize='xl' fontWeight="bold">{question.question}</Text>
                                             <Flex m={5} direction="column" alignItems="start">
                                                     <Button onClick={() => handleMultipleChoice(question.choiceA, question.id)} variant='ghost'>A: {question.choiceA}</Button>
@@ -109,11 +124,18 @@ const Quiz = ({ questions }) => {
                     </Heading>
                     <Box p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' w='100%'>
                         <FormControl>
-                            <FormLabel>Name</FormLabel>
+                            <FormLabel>First Name</FormLabel>
                             <Input 
-                                placeholder="Name" 
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                placeholder="First Name" 
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                variant='filled'
+                            />
+                            <FormLabel pt={3}>Last Name</FormLabel>
+                            <Input 
+                                placeholder="Last Name" 
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
                                 variant='filled'
                             />
                             <FormLabel pt={3}>Email</FormLabel>
@@ -130,11 +152,39 @@ const Quiz = ({ questions }) => {
                                 onChange={(e) => setQuestion(e.target.value)}
                                 variant='filled'
                             />
+                            <FormLabel pt={3}>Choice A</FormLabel>
+                            <Input 
+                                placeholder="Choice A"
+                                value={choiceA}
+                                onChange={(e) => setChoiceA(e.target.value)}
+                                variant='filled'
+                            />
+                            <FormLabel pt={3}>Choice B</FormLabel>
+                            <Input 
+                                placeholder="Choice B"
+                                value={choiceB}
+                                onChange={(e) => setChoiceB(e.target.value)}
+                                variant='filled'
+                            />
+                            <FormLabel pt={3}>Choice C</FormLabel>
+                            <Input 
+                                placeholder="Answer"
+                                value={choiceC}
+                                onChange={(e) => setChoiceC(e.target.value)}
+                                variant='filled'
+                            />
+                            <FormLabel pt={3}>Choice D</FormLabel>
+                            <Input 
+                                placeholder="Answer"
+                                value={choiceD}
+                                onChange={(e) => setChoiceD(e.target.value)}
+                                variant='filled'
+                            />
                             <FormLabel pt={3}>Answer</FormLabel>
                             <Input 
                                 placeholder="Answer"
-                                value={answer}
-                                onChange={(e) => setAnswer(e.target.value)}
+                                value={correctAnswer}
+                                onChange={(e) => setCorrectAnswer(e.target.value)}
                                 variant='filled'
                             />
                             <Button 
