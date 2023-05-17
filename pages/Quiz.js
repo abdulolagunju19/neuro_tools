@@ -1,19 +1,36 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import Container from '../components/Container'
+import MultipleChoice from '../components/MultipleChoice'
 import { supabase } from '../utils/supabaseClient'
-import { Flex, Text, Heading, VStack, Box } from '@chakra-ui/react'
-import { FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
+
+import { 
+    Flex, 
+    Text, 
+    Heading, 
+    VStack, 
+    Box,  
+    FormControl, 
+    FormLabel, 
+    Input, 
+    Button, 
+    Spacer, 
+    HStack,
+    Center
+} from '@chakra-ui/react'
+import { CloseIcon } from '@chakra-ui/icons'
+
 
 import { useRouter } from 'next/router'
 
 const Quiz = ({ questions }) => {
+    console.log(questions)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [question, setQuestion] = useState('')
     const [answer, setAnswer] = useState('')
     const [id, setID] = useState('')
+    const [active, setActive] = useState(false);
 
     const router = useRouter();
 
@@ -25,10 +42,11 @@ const Quiz = ({ questions }) => {
         error ? console.log(error) : console.log(data)
         router.reload()
     }
-    const handleDelete = async (e) => {
+
+    const handleDelete = async (quizId) => {
         const { data, error } = await supabase
             .from('questions')
-            .delete().eq('id', id);
+            .delete().eq('id', quizId);
     
         error ? console.log(error) : console.log(data)
         router.reload()
@@ -107,11 +125,22 @@ const Quiz = ({ questions }) => {
                     <Box>
                         {
                             (questions).map((question) =>
-                                <Box key={question.id} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                                    <Text key={question.id} pb={3} fontWeight="bold">Question: {question.question}</Text>
-                                    <Text key={question.id} pb={5}>Answer:  {question.answer}</Text>
-                                    <Text key={question.id} pb={5}>ID Number:  {question.id}</Text>
-                                </Box>
+                                <Center>
+                                    <Box key={question.id} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
+                                        <Text key={question.id} fontSize='xl' fontWeight="bold" as='ins'>Question {question.id}</Text>
+                                        <Text key={question.id} fontSize='xl' fontWeight="bold">{question.question}</Text>
+                                        <Flex m={5} direction="column" alignItems="start">
+                                                <Button variant='ghost'>A: {question.choiceA}</Button>
+                                                <Button variant='ghost'>B: {question.choiceB}</Button>
+                                                <Button variant='ghost'>C: {question.choiceC}</Button>
+                                                <Button variant='ghost'>D: {question.choiceD}</Button>
+                                        </Flex>
+                                        <HStack>
+                                            <Spacer />
+                                            <Button align="right" type="submit" onClick={() => handleDelete(question.id)} rightIcon={<CloseIcon />} >Delete</Button>
+                                        </HStack>
+                                    </Box>
+                                </Center>
                             )
                         }
                     </Box>
@@ -122,9 +151,9 @@ const Quiz = ({ questions }) => {
     )
 }
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async () => {
     // Query all questions
-    const { data: questions, error } = await supabase.from('questions').select();
+    const { data: questions, error } = await supabase.from('questions').select('*');
   
     if (error) {
       // Return 404 response.
@@ -136,7 +165,7 @@ export const getServerSideProps = async (context) => {
   
     return {
       props: {
-        questions,
+        questions
       }
     }
 }
