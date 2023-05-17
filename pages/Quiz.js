@@ -129,15 +129,15 @@ const Quiz = ({ questions }) => {
                                     <Box key={question.id} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
                                         <Text key={question.id} fontSize='xl' fontWeight="bold" as='ins'>Question {question.id}</Text>
                                         <Text key={question.id} fontSize='xl' fontWeight="bold">{question.question}</Text>
-                                        <Flex m={5} direction="column" alignItems="start">
-                                                <Button variant='ghost'>A: {question.choiceA}</Button>
-                                                <Button variant='ghost'>B: {question.choiceB}</Button>
-                                                <Button variant='ghost'>C: {question.choiceC}</Button>
-                                                <Button variant='ghost'>D: {question.choiceD}</Button>
+                                        <Flex key={question.id} m={5} direction="column" alignItems="start">
+                                                <Button key={question.id} variant='ghost'>A: {question.choiceA}</Button>
+                                                <Button key={question.id} variant='ghost'>B: {question.choiceB}</Button>
+                                                <Button key={question.id} variant='ghost'>C: {question.choiceC}</Button>
+                                                <Button key={question.id} variant='ghost'>D: {question.choiceD}</Button>
                                         </Flex>
-                                        <HStack>
+                                        <HStack key={question.id}>
                                             <Spacer />
-                                            <Button align="right" type="submit" onClick={() => handleDelete(question.id)} rightIcon={<CloseIcon />} >Delete</Button>
+                                            <Button key={question.id} align="right" type="submit" onClick={() => handleDelete(question.id)} rightIcon={<CloseIcon />} >Delete</Button>
                                         </HStack>
                                     </Box>
                                 </Center>
