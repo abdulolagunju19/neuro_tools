@@ -123,22 +123,24 @@ const Quiz = ({ questions }) => {
                     <Box>
                         {
                             (questions).map((question) =>
-                                <Center>
-                                    <Box key={question.id} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
-                                        <Text fontSize='xl' fontWeight="bold" as='ins'>Question {question.id}</Text>
-                                        <Text fontSize='xl' fontWeight="bold">{question.question}</Text>
-                                        <Flex m={5} direction="column" alignItems="start">
-                                                <Button variant='ghost'>A: {question.choiceA}</Button>
-                                                <Button variant='ghost'>B: {question.choiceB}</Button>
-                                                <Button variant='ghost'>C: {question.choiceC}</Button>
-                                                <Button variant='ghost'>D: {question.choiceD}</Button>
-                                        </Flex>
-                                        <HStack key={question.id}>
-                                            <Spacer />
-                                            <Button align="right" type="submit" onClick={() => handleDelete(question.id)} rightIcon={<CloseIcon />} >Delete</Button>
-                                        </HStack>
-                                    </Box>
-                                </Center>
+                                <>
+                                    <Center>
+                                        <Box key={question.id} p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
+                                            <Text fontSize='xl' fontWeight="bold" as='ins'>Question {question.id}</Text>
+                                            <Text fontSize='xl' fontWeight="bold">{question.question}</Text>
+                                            <Flex m={5} direction="column" alignItems="start">
+                                                    <Button variant='ghost'>A: {question.choiceA}</Button>
+                                                    <Button variant='ghost'>B: {question.choiceB}</Button>
+                                                    <Button variant='ghost'>C: {question.choiceC}</Button>
+                                                    <Button variant='ghost'>D: {question.choiceD}</Button>
+                                            </Flex>
+                                            <HStack key={question.id}>
+                                                <Spacer />
+                                                <Button align="right" type="submit" onClick={() => handleDelete(question.id)} rightIcon={<CloseIcon />} >Delete</Button>
+                                            </HStack>
+                                        </Box>
+                                    </Center>
+                                </>
                             )
                         }
                     </Box>
