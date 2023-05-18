@@ -7,13 +7,19 @@ import { FiLinkedin, FiMail, FiGithub, FiFacebook, FiTwitter } from "react-icons
 import { InlineWidget } from "react-calendly";
 
 import Container from '../components/Container'
+import Image from 'next/image';
+
+import { ArrowDownIcon } from '@chakra-ui/icons'
 
 const Contact = () => {
     return (
         <Container>
             <VStack>
-                <Text as='b' fontSize='2xl' p={5}>Thanks for visiting my site! Contact me at this email: olagunju(at)ualberta.ca</Text>
-                <HStack pb={1}>
+                <Text as='b' fontSize='xl' p={4}>Thanks for visiting my site! Contact me at this email: olagunju(at)ualberta.ca</Text>
+                <Image width="400px" height="400px" src="/images/coolbrain.gif"/>
+                <Text as='b' fontSize='xl' p={4}>Follow Me!</Text>
+                <ArrowDownIcon boxSize={10} />
+                <HStack py={1}>
                 <Link href="https://github.com/abdulolagunju19" isExternal>
                     <IconButton
                         variant="ghost"
@@ -50,7 +56,9 @@ const Contact = () => {
                     />
                 </Link>
                 </HStack>
-                <InlineWidget styles={{height:"50em", width: "70em"}} url="https://calendly.com/blandsentence/phone-screen" />
+                <Text as='b' fontSize='xl' p={4}>Let's set up a meeting!</Text>
+                <ArrowDownIcon boxSize={10} />
+                <InlineWidget styles={{height:"50em"}} url="https://calendly.com/blandsentence/phone-screen" />
             </VStack>
         </Container>
     )

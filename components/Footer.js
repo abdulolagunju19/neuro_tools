@@ -5,7 +5,7 @@ import { GoMarkGithub } from "react-icons/go"
 
 const Footer = () => {
   return (
-    <HStack spacing={20} py={5} justifyContent="center">
+    <HStack spacing={20} py={[0, 2, 4]} justify="center">
         <HStack>
             <Link href='/' style={{ textDecoration: 'none' }}>
                 <Button variant="ghost" size='md'>

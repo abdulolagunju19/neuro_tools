@@ -3,7 +3,7 @@ import React from 'react'
 
 const MultipleChoice = () => {
   return (
-    <Flex p={3} m={5} alignItems="start" direction="column">
+    <Flex p={[0, 2, 3]} m={[0, 2, 3]} alignItems="start" direction="column">
             <Button variant='ghost'>A </Button>
             <Button variant='ghost'>B </Button>
             <Button variant='ghost'>C </Button>
