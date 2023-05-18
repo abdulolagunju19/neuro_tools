@@ -56,7 +56,7 @@ const Contact = () => {
                     />
                 </Link>
                 </HStack>
-                <Text as='b' fontSize='xl' p={4}>Let's set up a meeting!</Text>
+                <Text as='b' fontSize='xl' p={4}>Set up a meeting!</Text>
                 <ArrowDownIcon boxSize={10} />
                 <InlineWidget styles={{height:"50em"}} url="https://calendly.com/blandsentence/phone-screen" />
             </VStack>

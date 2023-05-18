@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import { Flex, Text, Heading, Box, useToast } from '@chakra-ui/react'
-import { useColorMode } from '@chakra-ui/react'
 
 import { JigsawPuzzle } from 'react-jigsaw-puzzle/lib'
 import 'react-jigsaw-puzzle/lib/jigsaw-puzzle.css'
@@ -13,11 +12,6 @@ import TechStack from '../components/TechStack'
 export default function Home() {
   const toast = useToast();
   const id = 'test-toast'
-  const iconColor = {
-    light: 'gray.600',
-    dark: 'gray.300'
-  }
-  const { colorMode } = useColorMode()
 
   return (
     <>
@@ -60,7 +54,6 @@ export default function Home() {
                 href="https://vercel.com/"
                 src="/images/vercel_icon.jpeg"
                 alt='Vercel Logo'
-                color={iconColor[colorMode]}
             >
                 Vercel is what I use to deploy my websites.
             </TechStack>
@@ -69,7 +62,6 @@ export default function Home() {
                 href="https://nextjs.org/"
                 src="/images/nextjs_icon.png"
                 alt='Next.js Logo'
-                color={iconColor[colorMode]}
             >
                 Next.js is a react framework I use to build my websites.
             </TechStack>
@@ -78,7 +70,6 @@ export default function Home() {
                 href="https://reactjs.org/"
                 src="/images/react_icon.png"
                 alt='React Logo'
-                color={iconColor[colorMode]}
             >
                 React is a powerful javascript framework I use to build my websites.
             </TechStack>
@@ -87,7 +78,6 @@ export default function Home() {
                 href="https://code.visualstudio.com/"
                 src="/images/vscode.png"
                 alt='VS Code Logo'
-                color={iconColor[colorMode]}
             >
                 My Code Editor that allows me to build my applications.
             </TechStack>
@@ -96,7 +86,6 @@ export default function Home() {
                 href="https://chakra-ui.com/"
                 src="/images/chakra_icon.png"
                 alt='React Logo'
-                color={iconColor[colorMode]}
             >
                 A simple component library that makes my styling easy.
             </TechStack>
