@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link, Spacer, Button, Heading, HStack, IconButton, useColorMode } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import React from 'react';
+import { Link, Spacer, Button, Heading, HStack, IconButton, useColorMode } from '@chakra-ui/react';
+import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 
 const NavBar = () => {
-    const { colorMode, toggleColorMode } = useColorMode()
+    const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <HStack spacing={20}>
@@ -15,11 +15,6 @@ const NavBar = () => {
                 </Button>
             </Link>
             <HStack>
-                <Link href='/' style={{ textDecoration: 'none' }}>
-                    <Button variant="ghost" size='md'>
-                        Home
-                    </Button>
-                </Link>
                 <Link href='/Course' style={{ textDecoration: 'none' }}>
                     <Button variant="ghost" size='md'>
                         Course
@@ -56,4 +51,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavBar;

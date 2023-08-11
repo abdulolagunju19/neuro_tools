@@ -1,16 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import { Text, Heading, Flex, Link, Image, Box, Center } from '@chakra-ui/react'
-
-import {
+import { 
+    Text, 
+    Heading, 
+    Flex, 
+    Link, 
+    Image, 
+    Box, 
+    Center,
     Accordion,
     AccordionItem,
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-  } from '@chakra-ui/react'
+  } from '@chakra-ui/react';
 
-import Container from '../components/Container'
+import Container from '../components/Container';
 
 const News = ({ results }) => {
 
@@ -84,4 +89,4 @@ export async function getServerSideProps () {
     }
 }
 
-export default News
+export default News;

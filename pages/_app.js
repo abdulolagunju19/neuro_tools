@@ -1,5 +1,7 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import { Global, css } from '@emotion/react'
+import Head from 'next/head';
+
+import { ChakraProvider } from '@chakra-ui/react';
+import { Global, css } from '@emotion/react';
 
 const GlobalStyle = ({ children }) => {
 
@@ -35,6 +37,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
        <GlobalStyle>
+        <Head>
+          <link rel="shortcut icon" href="/images/favicon.ico" />
+        </Head>
         <Component {...pageProps} />
       </GlobalStyle>
     </ChakraProvider>

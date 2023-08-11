@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { Flex, Divider, Center, Spacer } from '@chakra-ui/react'
+import { Flex, Divider, Center } from '@chakra-ui/react';
 
-import NavBar from './NavBar'
-import Footer from './Footer'
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 const Container = ({ children }) => {
     
@@ -25,4 +25,4 @@ const Container = ({ children }) => {
   )
 }
 
-export default Container
+export default Container;

@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import { IconButton, Link, HStack, VStack, Text } from '@chakra-ui/react'
+import Image from 'next/image';
 
-import { FiLinkedin, FiMail, FiGithub, FiFacebook, FiTwitter } from "react-icons/fi"
+import { IconButton, Link, HStack, VStack, Text } from '@chakra-ui/react';
+import { ArrowDownIcon } from '@chakra-ui/icons'
+
+import { FiLinkedin, FiMail, FiGithub, FiFacebook, FiTwitter } from "react-icons/fi";
 
 import { InlineWidget } from "react-calendly";
 
-import Container from '../components/Container'
-import Image from 'next/image';
-
-import { ArrowDownIcon } from '@chakra-ui/icons'
+import Container from '../components/Container';
 
 const Contact = () => {
     return (
@@ -64,4 +64,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contact;

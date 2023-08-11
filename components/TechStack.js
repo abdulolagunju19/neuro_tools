@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
     Flex,
     Link,
@@ -8,24 +8,29 @@ import {
     useColorMode,
     Image,
     Spacer
-} from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+} from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 export const TechStack = ({ title, href, children, src, alt }) => {
-    const { colorMode } = useColorMode()
+    const { colorMode } = useColorMode();
+    
     const borderColor = {
         light: 'gray.200',
         dark: 'gray.600'
-    }
+    };
+
     const colorSecondary = {
         light: 'gray.700',
         dark: 'gray.400'
-    }
+    };
+
     const boxShadowColor = {
         light: '0px 8px 26px rgba(0, 0, 0, 0.1)',
         dark: '0px 8px 26px rgba(0, 0, 0, 0.9)'
-    }
-    const [opacity, setOpacity] = useState(0)
+    };
+
+    const [opacity, setOpacity] = useState(0);
+
     return (
         <Link
             href={href}
@@ -74,4 +79,4 @@ export const TechStack = ({ title, href, children, src, alt }) => {
         </Link>
     )
 }
-export default TechStack
+export default TechStack;

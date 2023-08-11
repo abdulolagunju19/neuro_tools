@@ -1,23 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import { Flex, Heading, VStack, Text, Box, Link } from '@chakra-ui/react'
-import {
+import { 
+    Heading, 
+    VStack, 
+    Text, 
+    Box, 
+    Link,
     Accordion,
     AccordionItem,
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-  } from '@chakra-ui/react'
-  import {
-    List,
     ListItem,
-    ListIcon,
-    OrderedList,
+    OrderedList
   } from '@chakra-ui/react'
 
-import Container from '../components/Container'
-
-import { PDFObject } from 'react-pdfobject'
+import Container from '../components/Container';
 
 const Course = () => {
     return (
@@ -140,124 +138,124 @@ const Course = () => {
                     </AccordionItem>
                 </Accordion>
                 <OrderedList p={3}>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://neurowiki.case.edu/wiki/Course_syllabus' isExternal>
                         <ListItem p={3}>
-                            https://neurowiki.case.edu/wiki/Course_syllabus
+                            Neuro Course: https://neurowiki.case.edu/wiki/Course_syllabus
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://brushingupscience.com/' isExternal>
                         <ListItem p={3}>
-                            https://brushingupscience.com/
+                            Science Blog: https://brushingupscience.com/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://aaltoscicomp.github.io/python-for-scicomp/' isExternal>
                         <ListItem p={3}>
-                            https://aaltoscicomp.github.io/python-for-scicomp/
+                            Python for Science: https://aaltoscicomp.github.io/python-for-scicomp/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html' isExternal>
                         <ListItem p={3}>
                             https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://www.youtube.com/watch?v=dSHnGO9qGsE' isExternal>
                         <ListItem p={3}>
-                            https://neurowiki.case.edu/wiki/Course_syllabus
+                            The Vestibular System: https://www.youtube.com/watch?v=dSHnGO9qGsE
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://www.atlasmeditech.com/3d-models' isExternal>
                         <ListItem p={3}>
-                            https://brushingupscience.com/
+                            Atlas MediTech: https://www.atlasmeditech.com/3d-models
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://www.youtube.com/watch?v=GAoUc5ZgWrw' isExternal>
                         <ListItem p={3}>
-                            https://aaltoscicomp.github.io/python-for-scicomp/
+                            Basal Ganglia: https://www.youtube.com/watch?v=GAoUc5ZgWrw
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://nba.uth.tmc.edu/neuroscience/m/s3/chapter05.html' isExternal>
                         <ListItem p={3}>
-                            https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html
+                            Cerebellum: https://nba.uth.tmc.edu/neuroscience/m/s3/chapter05.html
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://nba.uth.tmc.edu/neuroscience/s1/chapter09.html' isExternal>
                         <ListItem p={3}>
-                            https://neurowiki.case.edu/wiki/Course_syllabus
+                            Synapses: https://nba.uth.tmc.edu/neuroscience/s1/chapter09.html
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://highered.mheducation.com/sites/0072507470/student_view0/chapter12/multiple_choice_quiz_1.html' isExternal>
                         <ListItem p={3}>
-                            https://brushingupscience.com/
+                            Spinal Cord: https://highered.mheducation.com/sites/0072507470/student_view0/chapter12/multiple_choice_quiz_1.html
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='http://databoys.github.io/Feedforward/' isExternal>
                         <ListItem p={3}>
-                            https://aaltoscicomp.github.io/python-for-scicomp/
+                            Neural Network Numpy: http://databoys.github.io/Feedforward/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://github.com/eselkin/awesome-computational-neuroscience/blob/master/README.md' isExternal>
                         <ListItem p={3}>
-                            https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html
+                           Computational Neuro Repository: https://github.com/eselkin/awesome-computational-neuroscience/blob/master/README.md
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://github.com/BlueBrain/BioExplorer' isExternal>
                         <ListItem p={3}>
-                            https://neurowiki.case.edu/wiki/Course_syllabus
+                            BioExplorer: https://github.com/BlueBrain/BioExplorer
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://subclassy.github.io/bio-vision' isExternal>
                         <ListItem p={3}>
-                            https://brushingupscience.com/
+                            Bio Vision: https://subclassy.github.io/bio-vision
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://mark-kramer.github.io/Case-Studies-Python/01.html' isExternal>
                         <ListItem p={3}>
-                            https://aaltoscicomp.github.io/python-for-scicomp/
+                            Python for Neuro: https://mark-kramer.github.io/Case-Studies-Python/01.html
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://mrgreene09.github.io/computational-neuroscience-textbook/' isExternal>
                         <ListItem p={3}>
-                            https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html
+                            Computational Neuro: https://mrgreene09.github.io/computational-neuroscience-textbook/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://neuraldatascience.io/intro.html' isExternal>
                         <ListItem p={3}>
-                            https://neurowiki.case.edu/wiki/Course_syllabus
+                            Neuro Data Science: https://neuraldatascience.io/intro.html
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='http://karpathy.github.io/2016/09/07/phd/' isExternal>
                         <ListItem p={3}>
-                            https://brushingupscience.com/
+                            PHD: http://karpathy.github.io/2016/09/07/phd/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://www.microbehunter.com/microscopy-forum/viewforum.php?f=3&sid=7addb7a55596cc105745bc046dd68d38' isExternal>
                         <ListItem p={3}>
-                            https://aaltoscicomp.github.io/python-for-scicomp/
+                            Microscope Forum: https://www.microbehunter.com/microscopy-forum/viewforum.php?f=3&sid=7addb7a55596cc105745bc046dd68d38
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://github.com/ajuavinett/FUN_2023' isExternal>
                         <ListItem p={3}>
-                            https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html
+                            Neuro Workshop: https://github.com/ajuavinett/FUN_2023
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://sites.google.com/ucsd.edu/neuroedu/' isExternal>
                         <ListItem p={3}>
-                            https://neurowiki.case.edu/wiki/Course_syllabus
+                            Open Neuroscience: https://sites.google.com/ucsd.edu/neuroedu/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://sites.google.com/ucsd.edu/bipn145/electrophysiology/human-eeg' isExternal>
                         <ListItem p={3}>
-                            https://brushingupscience.com/
+                            Human EEG: https://sites.google.com/ucsd.edu/bipn145/electrophysiology/human-eeg
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://www.fiercebiotech.com/' isExternal>
                         <ListItem p={3}>
-                            https://aaltoscicomp.github.io/python-for-scicomp/
+                            Fierce Biotech: https://www.fiercebiotech.com/
                         </ListItem>
                     </Link>
-                    <Link href='https://chakra-ui.com' isExternal>
+                    <Link href='https://www.youtube.com/watch?v=fDP-UmfxXlA' isExternal>
                         <ListItem p={3}>
-                            https://michaeldmann.net/The%20Nervous%20System%20In%20Action.html
+                            Neurulation: https://www.youtube.com/watch?v=fDP-UmfxXlA
                         </ListItem>
                     </Link>
                 </OrderedList>
@@ -266,4 +264,4 @@ const Course = () => {
     )
 }
 
-export default Course
+export default Course;
