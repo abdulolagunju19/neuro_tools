@@ -17,7 +17,7 @@ export default function Home() {
       <Container>
         <Flex as="main" maxW={700} m={4} flexDir="column" justifyContent="center">
           <Heading py={[0, 2, 4]}>Learn Neuroscience!</Heading>
-          <Text fontSize="md" pt={3} pb={8}>Greetings and welcome to Neuro*Discite! This platform serves as a comprehensive repository for the wealth of knowledge I have acquired in the field of Neuroscience. Within this site, you'll find a diverse range of resources, including educational articles, employment opportunities, interactive quizzes, and instructive tutorials. Here is to a fulfilling and enlightening learning experience!</Text>
+          <Text fontSize="md" pt={3} pb={8}>Greetings and welcome to Neuro*Discite! This platform serves as a comprehensive repository for the wealth of knowledge I have acquired in the field of Neuroscience. Within this site, you will find a diverse range of resources, including educational articles, employment opportunities, interactive quizzes, and instructive tutorials. Here is to a fulfilling and enlightening learning experience!</Text>
           <Image width="300px" height="400px" src="/brain.gif"/>
           <Heading pt={5} pb={5} as='h3' size='md'>
             Start Here: Beat the Jigsaw Puzzle!

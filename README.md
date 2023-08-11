@@ -17,30 +17,20 @@ Feel free to [reach out](https://abneuro.vercel.app/contact) to me if you have a
 1. **Home Page**: <br/>
 <img width="100%" src="./public/home_page.png" alt="homepage" /> 
 
-2. **Register Page**: <br/>
-<img width="100%" src="./public/register_page.png" alt="registerpage" /> 
+2. **Course Page**: <br/>
+<img width="100%" src="./public/course_page.png" alt="registerpage" /> 
 
-3. **Dashboard Page**: <br/>
-<img width="100%" src="./public/dashboard_page.png" alt="dashboardpage" /> 
+3. **Quiz Page**: <br/>
+<img width="100%" src="./public/quiz_page.png" alt="dashboardpage" /> 
 
-4. **Login Page**: <br/>
-<img width="100%" src="./public/login_page.png" alt="loginpage" /> 
+4. **News Page**: <br/>
+<img width="100%" src="./public/news_page.png" alt="loginpage" /> 
 
-5. **Buy Page**: <br/>
-<img width="100%" src="./public/buy_page.png" alt="buypage" /> 
+5. **Jobs Page**: <br/>
+<img width="100%" src="./public/jobs_page.png" alt="buypage" /> 
 
-5. **Transaction Page**: <br/>
-<img width="100%" src="./public/transaction_page.png" alt="transactionpage" /> 
-
-## ⚡️ Technologies 
-
-This site was built using Flask and MySQL. 
-
-The Neurocoin System allows users to manage a blockchain-based ledger of transactions for a token system. Users can register, log in, view their account balance, send tokens to other users, and empty their account.
-
-**Here is a simple diagram showing how databases can be connected to a Next.js web app:**
-
-<img width="100%" src="./public/db-nextjs.png" alt="architecture" /> 
+5. **Contact Page**: <br/>
+<img width="100%" src="./public/contact_page.png" alt="transactionpage" /> 
 
 ### Features
 - Quiz application
