@@ -47,6 +47,7 @@ const Quiz = ({ questions }) => {
     const router = useRouter();
     const toast = useToast();
 
+    // Handle submitting a new question
     const handleSubmit = async () => {
         const { data, error } = await supabase
             .from('questions')
@@ -66,6 +67,7 @@ const Quiz = ({ questions }) => {
         router.reload();
     }
 
+    // Handle deleting a question
     const handleDelete = async (quizId) => {
         const { data, error } = await supabase
             .from('questions')
@@ -120,10 +122,14 @@ const Quiz = ({ questions }) => {
         <Container>
             <Flex maxW={700} m={5} flexDir="column" justifyContent="center">
                 <VStack justifyContent="center">       
-                <Heading>Multiple Choice Test</Heading>             
+                <Heading>Multiple Choice Test</Heading>  
+                {/* In case the supabase database is down, do not show MCQs */}
+                { questions &&
+                <>           
                     <Box width='100%'>
                         <Center>
                             {showScore ? (
+                                // Show results and reset button after completing the quiz
                                 <Box p={3} m={5} overflow='hidden' width='100%'>
                                     <Heading mb={5}>
                                         Results: You scored {score} out of {questions.length}!
@@ -132,6 +138,7 @@ const Quiz = ({ questions }) => {
                                     <Button onClick={resetQuiz}>Reset Quiz</Button>
                                 </Box>
                                 ) : (
+                                    // Display a question with multiple-choice options
                                     <Box p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' width='100%'>
                                         <Text fontSize='xl' fontWeight="bold" as='ins'>Question {currentQuestion + 1}</Text>
                                         <Text fontSize='xl' fontWeight="bold">{questions[currentQuestion].question}</Text>
@@ -150,6 +157,7 @@ const Quiz = ({ questions }) => {
                             }
                         </Center>
                     </Box>
+                    {/* Form to add new questions */}
                     <Box p={3} m={5} borderWidth='1px' borderRadius='lg' overflow='hidden' w='100%'>
                         <Heading p={5} as='h3' size='lg'>
                             Add Questions to Help Other Students!
@@ -220,7 +228,10 @@ const Quiz = ({ questions }) => {
                             </SimpleGrid>
                         </FormControl>
                     </Box>
+                </>
+                }
                 </VStack>
+                {/* List of additional questions */}
                 <OrderedList p={3}>
                     <Heading p={3} size="md">For more questions:</Heading>
                     <Link href='https://global.oup.com/uk/orc/pharmacy/ifp_therapeutics/student/mcqs/ch05/' isExternal>
@@ -261,15 +272,12 @@ const Quiz = ({ questions }) => {
 
 export const getServerSideProps = async () => {
 
-    // Query all questions
+    // Query all questions from supabase
     const { data: questions, error } = await supabase.from('questions').select('*');
   
     if (error) {
-      // Return 404 response.
       // No questions found or something went wrong with the query
-      return {
-        notFound: true,
-      }
+      console.error('Cannot fetch questions from supabase, error: ' + error);
     }
   
     return {

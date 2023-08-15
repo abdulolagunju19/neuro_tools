@@ -41,6 +41,9 @@ Feel free to [reach out](https://abneuro.vercel.app/contact) to me if you have a
 - Chakra UI
 - Supabase
 
+### New Improvements
+1. When the supabase database is down, do not show a 404 page on the quiz page.
+
 ## Future Improvements
 1. Add user authentication. 
 2. Scrape more job sites for science related jobs.
